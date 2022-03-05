@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "emotion-detection"
+version = "0.1.0"
+description = ""
+authors = ["Ben Sheppard <bsheppfm@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+transformers = "^4.17.0"
+torch = "^1.10.2"
+fastapi = "^0.74.1"
+uvicorn = "^0.17.5"
+
+[tool.poetry.dev-dependencies]
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
