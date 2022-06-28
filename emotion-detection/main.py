@@ -8,20 +8,10 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 
 
-class Candidate(BaseModel):
-    text: str
-
-@app.get("/")
-def read_root():
-    print("home...")
-    return {"Hello": "World"}
-
-
-@app.post("/emotion-detect")
-def read_emotion(candidate: Candidate):
-    print("Beginning. detection..")
-    prediction = detect(candidate.text)
+@app.get("/emotion-detect")
+def read_emotion(content: str):
+    print("Beginning detection for text: ", content)
+    prediction = detect(content)
 
     return prediction
-
 

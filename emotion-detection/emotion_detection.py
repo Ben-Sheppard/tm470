@@ -11,7 +11,6 @@ classifier = pipeline(
 
 
 def detect(text):
-    print("Running")
     prediction = classifier(text, )
-    print(prediction)
+    print("Found results: ", prediction)
     return prediction

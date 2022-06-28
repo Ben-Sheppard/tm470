@@ -1,0 +1,43 @@
+@use 'node_modules/@carbon/react/index' as carbon-react;
+@use 'node_modules/@carbon/styles/index' as carbon-styles;
+@use 'node_modules/@carbon/styles/scss/grid/index' as carbon-grid-style;
+@use './src/components/HeadlineCounts/headlineCounts' as heaclineCounts;
+
+@include carbon-grid-style.flex-grid();
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  width: 80%;
+  margin: 100px auto 0 auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.moodSelect, .moodContext, .reviewSection {
+  margin: 25px 0 40px 0;
+}
+
+.moodSelect label:hover, .moodSelect input:hover {
+  cursor: pointer;
+}
+
+.emoji {
+  font-size: 64px;
+}
+
+.notificationContainer {
+  position: fixed;
+  margin: 0;
+  z-index: 1000;
+}

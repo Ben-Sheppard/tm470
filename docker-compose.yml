@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres:14.2-alpine
+    restart: always
+    volumes:
+      - ./db-init-scripts:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "2<8NPb[bJs5Y"
+      POSTGRES_USER: "my-mood"
+      POSTGRES_DB: "my-mood-db"
+  emotion-detection:
+    image: emotion-detection:latest
+    ports:
+      - "8085:8085"
